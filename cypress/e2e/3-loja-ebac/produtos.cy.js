@@ -1,9 +1,10 @@
 /// <references types="cypress"/>
+import produtosPage from "../../support/page-objects/produtos.page";
 
 describe('Funcionalidade: Produtos', () => {
 
     beforeEach(() => {
-        cy.visit('produtos')
+        produtosPage.visitarUrl()
     });
     
     afterEach(() => {
@@ -11,14 +12,14 @@ describe('Funcionalidade: Produtos', () => {
     })
     
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-        //.first()
-        //.last()
-        //.eq(2)
-        .contains('Argus All-Weather Tank')
-        .click()
-        .wait(3000)
+     produtosPage.buscarProdutoLista('Argus All-Weather Tank')
+        cy.get('.product_title').should('exist')
 
+        
+    });
+
+    it.only('Deve buscar um produto com sucesso', () => {
+        produtosPage.buscarProduto('Pierce Gym Short')
         cy.get('.product_title').should('exist')
 
         

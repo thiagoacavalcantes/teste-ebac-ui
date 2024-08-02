@@ -1,0 +1,23 @@
+[
+    {
+        "nomeProduto": "Abominable Hoodie", 
+        "tamanho": "S",
+        "cor": "Red",
+        "quantidade": 3
+    },
+
+    {
+        "nomeProduto": "Grayson Crewneck Sweatshirt", 
+        "tamanho": "Xs",
+        "cor": "Orange",
+        "quantidade": 5
+    },
+
+    {
+        "nomeProduto": "Apollo Running Short", 
+        "tamanho": "34",
+        "cor": "Black",
+        "quantidade": 10
+    }
+
+]
